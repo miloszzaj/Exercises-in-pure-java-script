@@ -73,3 +73,21 @@ console.log(oddIndex([2, 4, 7, 8]));
 
 const hasStrawberry = x => x.includes("strawberry");
 console.log(hasStrawberry(["banan", "marakuja"]));
+
+// 8. Stwórz funkcje someAdult ( people) która sprawdzi, czy w$ród podanych osób jest ktos
+// dorosty. Np.:
+// someAdult([
+// {name: "Melodia" age: 15},
+// {name: "Kosmo", age: 19},
+// 1)
+// powinno zwrócié true .
+// Uzyj Array. some
+
+const someAdult = x => x.some(({ age }) => age > 18);
+
+const arrayOfPeople = [
+  { name: "Melodia", age: 15 },
+  { name: "Kosmo", age: 19 },
+];
+
+console.log(someAdult(arrayOfPeople));
