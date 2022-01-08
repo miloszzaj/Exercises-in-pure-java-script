@@ -65,3 +65,11 @@ console.log(
 const oddIndex = x => x.findIndex(number => number % 2 !== 0);
 // or Math.abs(n % 2) !== 0
 console.log(oddIndex([2, 4, 7, 8]));
+
+// 7. Stwórz funkcje hasStrawberry (fruits) , która sprawdzi, czy w podanych owocach jest
+// truskawka. Np.:
+// hasSt rawberry ( ["banan", "marakuja"]) powinno zwrócié false .
+// Uzyj Array. includes
+
+const hasStrawberry = x => x.includes("strawberry");
+console.log(hasStrawberry(["banan", "marakuja"]));
