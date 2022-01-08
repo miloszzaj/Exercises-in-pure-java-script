@@ -36,3 +36,7 @@ console.log(myFunction(1, 3, undefined, true));
 // tablicy. Np.:
 // index0f ("kawa", ["rum", "kawa", "sangría"]) powinno zwrócié 1 .
 // Uzyj Array. index0f.
+
+const array = ["rum", "kawa", "sangría"];
+const indexOf = (x, y) => y.indexOf(x);
+console.log(indexOf("kawa", ["rum", "kawa", "sangría"]));
