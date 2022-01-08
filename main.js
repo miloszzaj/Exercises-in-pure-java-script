@@ -91,3 +91,25 @@ const arrayOfPeople = [
 ];
 
 console.log(someAdult(arrayOfPeople));
+
+// 9. Stwórz funkcje onlyString() która sprawdzi, czy wszystkie podane argumenty sa tekstowe.
+// Np.:
+// onlyString("", "Zelazko") powinno zwrócié true
+// Uzyj Array. every .
+
+const onlyString = x => x.every(x => (x.typeof = "string"));
+
+console.log(onlyString(["", "Zelazko"]));
+
+// 10. Stwórz funkcje filterPremium (carBrands) , która z podanej tablicy marek samochodów
+// zwróci tylko marki premium. Np.:
+// filterPremium ( ["Peugeot", "BMW", "Audi"]) powinno zwrócic ["BMW", "Audi"] .
+// Zatózmy, 2e marki premium to BMW, Audi i Mercedes.
+// Uzyj Array. filter oraz Array. includes.
+
+const cars = ["Peugeot", "BMW", "Audi"];
+
+const filterPremium = x =>
+  x.filter(premium => ["BMW", "Audi", "Mercedes"].includes(premium));
+
+console.log(filterPremium(cars));
