@@ -97,9 +97,14 @@ console.log(someAdult(arrayOfPeople));
 // onlyString("", "Zelazko") powinno zwrócié true
 // Uzyj Array. every .
 
-const onlyString = x => x.every(x => (x.typeof = "string"));
+const onlyString1 = x => x.every(y => (y.typeof = "string"));
 
-console.log(onlyString(["", "Zelazko"]));
+console.log(onlyString1(["", "Zelazko"]));
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+const onlyString2 = (...params) => params.every(y => (y.typeof = "string"));
+
+console.log(onlyString2("", "Zelazko"));
 
 // 10. Stwórz funkcje filterPremium (carBrands) , która z podanej tablicy marek samochodów
 // zwróci tylko marki premium. Np.:
