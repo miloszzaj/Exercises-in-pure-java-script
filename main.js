@@ -46,7 +46,7 @@ console.log(indexOf("kawa", ["rum", "kawa", "sangría"]));
 // {content: ""},
 // {content: "kupié balony W ksztatcie psów"},
 // )
-// powinno zwróció {content: "kupió balony w ksztatcie psów"}
+// powinno zwróció {content: "kupic balony w ksztatcie psów"}
 // Uzyj Array. find
 
 const findNonEmptyTask = x => x.find(x => x.content !== "");
@@ -54,6 +54,14 @@ const findNonEmptyTask = x => x.find(x => x.content !== "");
 console.log(
   findNonEmptyTask([
     { content: "" },
-    { content: "kupié balony W ksztatcie psów" },
+    { content: "kupic balony W ksztatcie psów" },
   ])
 );
+
+// Stwórz funkcje oddIndex (numbers) , która zwróci indeks pierwszej nieparzystej liczby z
+// podanej tablicy. Np.:
+// oddIndex ([2, 4, 7, 8]) powinno zwrócié 2 .
+
+const oddIndex = x => x.findIndex(number => number % 2 !== 0);
+// or Math.abs(n % 2) !== 0
+console.log(oddIndex([2, 4, 7, 8]));
