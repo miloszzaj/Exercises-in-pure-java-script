@@ -97,14 +97,13 @@ console.log(someAdult(arrayOfPeople));
 // onlyString("", "Zelazko") powinno zwrócié true
 // Uzyj Array. every .
 
-const onlyString1 = x => x.every(y => (y.typeof = "string"));
-
-console.log(onlyString1(["", "Zelazko"]));
-
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
-const onlyString2 = (...params) => params.every(y => (y.typeof = "string"));
+const tab = ("", "Zelazko");
+const onlyString2 = (...params) =>
+  params.every(param => typeof param === "string");
+console.log(tab);
 
-console.log(onlyString2("", "Zelazko"));
+console.log(onlyString2(tab));
 
 // 10. Stwórz funkcje filterPremium (carBrands) , która z podanej tablicy marek samochodów
 // zwróci tylko marki premium. Np.:
@@ -118,3 +117,31 @@ const filterPremium = x =>
   x.filter(premium => ["BMW", "Audi", "Mercedes"].includes(premium));
 
 console.log(filterPremium(cars));
+
+// 11. Stwórz funkcje getColors () , która zwróci tablice kolorów samochodów podanych w
+// argumentach. Np.:
+// getColors(
+// {car: "BMW X5", color: "black"},
+// {car: "Peugeot 3008", color: "white"},
+// powinno zwróció ["black", "white"] .
+// Uzyj Array. map
+
+const array4 =
+  ({ car: "BMW X5", color: "black" }, { car: "Peugeot 3008", color: "white" });
+
+const getColors = (...params) => params.map(({ color }) => color);
+
+console.log(getColors(array4));
+
+// 12. Stwórz funkcje sortPeople (people) , która posortuje osoby od najmtodszych do najstarszych.
+// Przyktadowe uzycie:
+// sortPeople([
+// {name: "Krzychu", age: 30},
+// {name: "Zdzichu", age: 20},
+// 1)
+// Uzyj Array. sort .
+
+const people = [
+  { name: "Krzychu", age: 30 },
+  { name: "Zdzichu", age: 20 },
+];
