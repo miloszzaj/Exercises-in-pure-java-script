@@ -18,7 +18,7 @@ console.log(mergeArrays(arr1, arr2));
 
 arr3 = [2, "delfin", null];
 const exceptFirst = x => {
-  return (cos = [...x].slice(1));
+  return (cos = [...x].shift());
 };
 console.log(exceptFirst(arr3));
 
@@ -98,12 +98,10 @@ console.log(someAdult(arrayOfPeople));
 // Uzyj Array. every .
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
-const tab = ("", "Zelazko");
 const onlyString2 = (...params) =>
   params.every(param => typeof param === "string");
-console.log(tab);
 
-console.log(onlyString2(tab));
+console.log(onlyString2("", "Zelazko", ""));
 
 // 10. Stwórz funkcje filterPremium (carBrands) , która z podanej tablicy marek samochodów
 // zwróci tylko marki premium. Np.:
@@ -112,9 +110,8 @@ console.log(onlyString2(tab));
 // Uzyj Array. filter oraz Array. includes.
 
 const cars = ["Peugeot", "BMW", "Audi"];
-
-const filterPremium = x =>
-  x.filter(premium => ["BMW", "Audi", "Mercedes"].includes(premium));
+const premiumCars = ["BMW", "Audi", "Mercedes"];
+const filterPremium = cars => cars.filter(car => premiumCars.includes(car));
 
 console.log(filterPremium(cars));
 
@@ -126,12 +123,14 @@ console.log(filterPremium(cars));
 // powinno zwróció ["black", "white"] .
 // Uzyj Array. map
 
-const array4 =
-  ({ car: "BMW X5", color: "black" }, { car: "Peugeot 3008", color: "white" });
-
 const getColors = (...params) => params.map(({ color }) => color);
 
-console.log(getColors(array4));
+console.log(
+  getColors(
+    { car: "BMW X5", color: "black" },
+    { car: "Peugeot 3008", color: "white" }
+  )
+);
 
 // 12. Stwórz funkcje sortPeople (people) , która posortuje osoby od najmtodszych do najstarszych.
 // Przyktadowe uzycie:
